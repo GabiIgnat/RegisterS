@@ -1,13 +1,31 @@
-# RegisterS
+# RegisterS: A Service Registration and Discovery System
 
-Computer Networks project
+**Author:** Ignat Gabriel-Andrei, Year II, Group A4  
 
-## Getting Started
+## Project Overview
 
-Cerinta: 
-To implement a server that will provide customers with information about the servers (IP address and port) that offer the services they want.
-The way of operation is as follows: when a server offering a certain service is started, it will send to the registration server the IP address, port and name of the service offered;
- when a client wants a certain service, he will first send a request to the registration server with the name of the desired service, and he will return a message containing the IP address and port of the server offering the desired service.
+RegisterS is a system designed to map service names to their corresponding IP addresses and ports, similar to the DNS protocol. This simplifies access to network services by allowing users to connect using easily memorable service names.
+
+## Key Features
+
+- **Service Registration & Discovery**: Servers register their services with IP and port, and clients query these services.
+- **Concurrency**: Handles multiple clients simultaneously using threads.
+- **Reliability**: Utilizes TCP/IP for stable and reliable communication.
+
+## Technologies Used
+
+- **TCP/IP Protocol**
+- **POSIX Sockets**
+- **Threading with Mutexes**
+- **C Programming Language**
+
+## Usage
+
+RegisterS allows servers to register their services, and clients to discover and connect to these services through the RegisterS server.
+
+## Documentation
+
+Detailed implementation, architecture, and additional information can be found in the [project documentation](RegisterS.pdf).
 
 ## Running the aplication
 
@@ -17,8 +35,3 @@ The way of operation is as follows: when a server offering a certain service is 
     ./client 127.0.0.1 2777
 
 Basicaly you may connect to server with any IP address at that specific PORT, but since we want to just test it will use the loopback address: 127.0.0.1
-
-## License
-
-This project is licensed under GNU 
-GPL (General Public License)
